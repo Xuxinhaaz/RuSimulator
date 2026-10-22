@@ -1,7 +1,8 @@
-#include<PE.h>
-#include<stdio.h>
+#include "PE.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-PilhaE criaPilha(){
+PilhaE *criaPilha(){
     PilhaE *p = (PilhaE *)malloc(sizeof(PilhaE));
     p->topo = -1;
 

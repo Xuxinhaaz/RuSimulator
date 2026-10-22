@@ -7,7 +7,7 @@ typedef struct
 } PilhaE;
 
 PilhaE *criaPilha();
-void liberaPilha(PilhaE);
+void liberaPilha(PilhaE *p);
 void push(PilhaE *p, int x);
 int pop(PilhaE *p);
 

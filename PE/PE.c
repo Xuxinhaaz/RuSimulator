@@ -9,8 +9,12 @@ PilhaE *criaPilha(){
     return p;
 }
 
-void liberaPilha(PilhaE *p){
+int vazia(PilhaE *p){
+    return p->topo == -1 ? 1 : 0;
+}
 
+void liberaPilha(PilhaE *p){
+    free(p);
 }
 
 void push(PilhaE *p, int x) {

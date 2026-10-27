@@ -1,7 +1,7 @@
-#include<PD.h>
+#include "PD.h"
+#include <stdlib.h>
 
-
-PilhaD *cria_pilha(){
+PilhaD *criaPilha(){
     PilhaD *p = (PilhaD *)malloc(sizeof(PilhaD));
     p->topo = NULL;
 
@@ -9,7 +9,14 @@ PilhaD *cria_pilha(){
 }
 
 int vazia(PilhaD *p){
-    return p->topo == NULL ? 1 : 0; 
+    return p->topo == NULL ? 1 : 0;
+}
+
+void liberaPilha(PilhaD *p){
+    while(!vazia(p)){
+        pop(p);
+    }
+    free(p);
 }
 
 void push(PilhaD *p, int x){

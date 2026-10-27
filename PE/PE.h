@@ -1,14 +1,20 @@
-#define MAX 500
+#ifndef PE_H
+#define PE_H
 
-typedef struct 
+#define MAX_PE 500
+
+typedef struct
 {
-    int v[MAX];
+    int v[MAX_PE];
     int topo;
 } PilhaE;
 
-PilhaE *criaPilha();
-void liberaPilha(PilhaE *p);
-void push(PilhaE *p, int x);
-int pop(PilhaE *p);
+typedef PilhaE Pilha;
 
+Pilha *criaPilha();
+int vazia(Pilha *p);
+void liberaPilha(Pilha *p);
+void push(Pilha *p, int x);
+int pop(Pilha *p);
 
+#endif

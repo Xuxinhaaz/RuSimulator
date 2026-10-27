@@ -1,12 +1,20 @@
-#include "info.h"
-#define MAX 1000
+#ifndef FE_H
+#define FE_H
+
+#include "../info.h"
+#define MAX_FE 1000
 
 typedef struct {
-    Pessoa v[MAX];
+    Pessoa v[MAX_FE];
     int inicio, fim;
 } FilaE;
 
-FilaE *criaFila();
-int vazia(FilaE *f);
-void push(FilaE *p, char nome[50], char tipo);
-Pessoa pop(FilaE *f);
+typedef FilaE Fila;
+
+Fila *criaFila();
+int filaVazia(Fila *f);
+void liberaFila(Fila *f);
+void enfileira(Fila *f, char nome[50], char tipo);
+Pessoa desenfileira(Fila *f);
+
+#endif

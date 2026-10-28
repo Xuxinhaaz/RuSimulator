@@ -14,7 +14,7 @@ typedef FilaE Fila;
 Fila *criaFila();
 int filaVazia(Fila *f);
 void liberaFila(Fila *f);
-void enfileira(Fila *f, char nome[50], char tipo);
+void enfileira(Fila *f, Pessoa x);
 Pessoa desenfileira(Fila *f);
 
 #endif

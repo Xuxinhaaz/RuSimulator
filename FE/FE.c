@@ -1,5 +1,4 @@
 #include "FE.h"
-#include <string.h>
 #include <stdlib.h>
 
 FilaE *criaFila(){
@@ -17,9 +16,8 @@ void liberaFila(FilaE *f){
     free(f);
 }
 
-void enfileira(FilaE *f, char nome[50], char tipo){
-    strcpy(f->v[f->fim].nome, nome);
-    f->v[f->fim].tipo = tipo;
+void enfileira(FilaE *f, Pessoa x){
+    f->v[f->fim] = x;
     f->fim = (f->fim + 1) % MAX_FE;
 }
 

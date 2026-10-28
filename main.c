@@ -2,7 +2,8 @@
 #include <string.h>
 #include "info.h"
 #include "PE/PE.h"  
-#include "FE/FE.h"  
+#include "FE/FE.h"
+//#include "FD/FD.h"
 
 //precos em centavos
 #define PRECO_A 350
@@ -124,16 +125,15 @@ int main () {
             imprime(n, &serieTickets, tipo, pAluno, pBolsista, pVisita);
 
         } else if(strcmp(command, "chega") == 0) {
-            char nome[50];
-            char tipo;
+            Pessoa pessoa;
 
-            scanf("%49s %c", nome, &tipo);
+            scanf("%49s %c", pessoa.nome, &pessoa.tipo);
 
-            enfileira(f, nome, tipo);
+            enfileira(f, pessoa);
 
-            if (tipo == 'A') printf("aluno %s chegou com fome.\n", nome);
-            else if (tipo == 'B') printf("bolsista %s chegou com fome.\n", nome);
-            else if (tipo == 'V') printf("visitante %s chegou com fome.\n", nome);
+            if (pessoa.tipo == 'A') printf("aluno %s chegou com fome.\n", pessoa.nome);
+            else if (pessoa.tipo == 'B') printf("bolsista %s chegou com fome.\n", pessoa.nome);
+            else if (pessoa.tipo == 'V') printf("visitante %s chegou com fome.\n", pessoa.nome);
 
         } else if(strcmp(command, "proximo") == 0){
             proximo(f, &serieTickets, &totalPago, &totalSubsidio, pAluno, pBolsista, pVisita);
@@ -145,4 +145,3 @@ int main () {
     }
     return 0;
 }
-

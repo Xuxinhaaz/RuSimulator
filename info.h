@@ -6,4 +6,6 @@ typedef struct {
     char tipo;
 } Pessoa;
 
+typedef Pessoa info_t;
+
 #endif

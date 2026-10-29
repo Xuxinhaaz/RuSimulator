@@ -13,7 +13,7 @@ typedef struct {
     NoFila *fim;
 } FilaD;
 
-typedef FilaD Fila; //nome generico usado no main
+typedef FilaD Fila;
 
 Fila *criaFila();
 int filaVazia(Fila *f);

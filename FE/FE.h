@@ -12,9 +12,9 @@ typedef struct {
 typedef FilaE Fila;
 
 Fila *criaFila();
-int filaVazia(Fila *f);
+int filaVazia(Fila *f); // f é um ponteiro para a fila
 void liberaFila(Fila *f);
-void enfileira(Fila *f, Pessoa x);
+void enfileira(Fila *f, Pessoa x); //x é a Pessoa a ser inserida (ou, em desenfileira, a pessoa removida)
 Pessoa desenfileira(Fila *f);
 
 #endif
